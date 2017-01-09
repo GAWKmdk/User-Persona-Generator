@@ -1,0 +1,28 @@
+<template name="Menu">
+	<h1 class="page-title">Active User Studies</h1>
+    
+  
+   
+        
+    <div class="col-md-12">
+	{{#each recipes}} 
+		{{> MenuItem}}
+	{{else}}
+		<blockquote>
+			<p>Please activate a <a href="/recipe-book">user(s)</a> to view current study group.</p>
+             </blockquote>
+	{{/each}}
+            </div>
+    
+   
+    
+</template>
+
+<template name="MenuItem">
+	<div class="menu-item col-md-2 text-center" style="padding:10px;margin:10px;min-height:75px;min-width:55px;">
+        <br>
+		<h4><b>{{name}}</b></h4>
+        <img src="{{avatar}}" alt="{{name}}"><br>
+        <a class="btn btn-info" href="/recipe/{{_id}}">VIEW BRIEF</a>
+	</div>
+</template>

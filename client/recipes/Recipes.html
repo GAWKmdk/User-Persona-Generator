@@ -1,0 +1,28 @@
+<template name="Recipes">
+	{{#if $.Session.get 'newRecipe'}}
+		{{> NewRecipe}}
+	{{else}}
+		<button class="new-recipe">Create a New User Persona</button><br>  
+    <span class="label label-default"><i class="fa fa-search" aria-hidden="true"></i>
+{{> EasySearch.Input index=RecipesIndex }}</span>
+	{{/if}}	
+	<section class="recipes">
+		{{#if Template.subscriptionsReady}}
+        
+			<!--{{#each recipes}}
+				{{> Recipe}}
+			{{/each}} --> 
+        
+              {{#EasySearch.Each index=RecipesIndex }}
+              {{> Recipe}}
+             {{/EasySearch.Each}}
+        <br>
+        {{> EasySearch.Pagination index=RecipesIndex maxPages=50}} 
+        
+        
+        
+		{{else}}
+			<p>Loading ...</p>
+		{{/if}}
+	</section>
+</template>

@@ -1,0 +1,213 @@
+<template name="Recipe">
+   
+	<article class="recipe {{#if inMenu}}in-menu{{/if}}">
+         <br>
+		<h3>{{name}}</h3>
+        <br><br>
+        <div class="row">
+          
+         <div class="col-md-2">
+        <img src="{{avatar}}" alt="{{name}}">
+		</div>
+      
+        {{#if editMode}}
+        
+        
+			<!-- {{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}} --> 
+          <br>
+        
+        <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1default" data-toggle="tab">General Details</a></li>
+                            <li><a href="#tab2default" data-toggle="tab">Photo and Traits</a></li>
+                            <li><a href="#tab3default" data-toggle="tab">Motivation Details</a></li>
+                            <li><a href="#tab4default" data-toggle="tab">Personality Details</a></li>
+                            <li><a href="#tab5default" data-toggle="tab">User Goals and Frustrations </a></li>
+                            <li><a href="#tab6default" data-toggle="tab">User Product Details</a></li>
+                            <li><a href="#tab7default" data-toggle="tab">User Brand Details</a></li>
+                            
+                        </ul>
+                </div>
+            
+             {{#autoForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true }}
+                <div class="panel-body">
+                   
+                    <fieldset>
+                        
+                    <div class="tab-content">
+                       
+                        <!-- tab-->
+                        <div class="tab-pane fade in active" id="tab1default">
+                        <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Information:</strong> This is the General Details of the User.
+</div>
+                        <h3>Profile Bio</h3>
+                         <hr>
+                            
+                            {{> afQuickField name='name'}}
+                            {{> afQuickField name='age'}}
+                            {{> afQuickField name='gender'}}
+                            {{> afQuickField name='status'}}
+                            {{> afQuickField name='job'}}
+                             {{> afQuickField name='location'}}
+                             {{> afQuickField name='avatar'}}
+                              {{> afQuickField name='bio' rows=5}}
+                             
+                           
+                        </div>
+                        
+                        <!-- tab-->
+                        <div class="tab-pane fade" id="tab2default">
+                        <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Information:</strong> This is the User' Trait Cards.
+</div>
+                        <h3>Traits</h3>
+                         <hr>
+                          
+                             {{> afQuickField name='traits'}}
+                        </div>
+                          
+                         <!-- tab-->
+                        <div class="tab-pane fade" id="tab3default">
+                        <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <strong>Information:</strong> This is the General Motivations of the User; rating on a scale of 1-10. The higher number scaling more importance/focus.
+</div>    
+                        <h3>Users' Behavioral Motivations</h3>
+                         <hr>
+                             {{> afQuickField name='influence'}} 
+                             {{> afQuickField name='selfachievement'}}
+                             {{> afQuickField name='growthprojection'}}
+                             {{> afQuickField name='fear'}}
+                             {{> afQuickField name='security'}}
+                             {{> afQuickField name='relationship'}}
+                             {{> afQuickField name='financial'}}
+                             {{> afQuickField name='professional'}}
+                             {{> afQuickField name='lifestyle'}}
+                             {{> afQuickField name='social'}}
+                            
+                            <br>
+                           
+                        </div>
+                        
+                         <!-- tab-->
+                        <div class="tab-pane fade" id="tab4default">
+                        <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Information:</strong> This is General Personality pairing of the User.
+</div>  
+                            
+                        <h3>Users' Personality Pairing</h3>
+                        <hr>
+                         {{> afQuickField name='personal1' options="allowed"}}
+                             {{> afQuickField name='personal2' options="allowed" }}
+                             {{> afQuickField name='personal3' options="allowed"}}
+                             {{> afQuickField name='personal4' options="allowed"}}
+                             {{> afQuickField name='personal5' options="allowed"}}
+                             {{> afQuickField name='personal6' options="allowed"}}
+                             {{> afQuickField name='personal7' options="allowed"}}
+                             {{> afQuickField name='personal8' options="allowed"}}
+                            
+                        </div>
+                        
+                         <!-- tab-->
+                        <div class="tab-pane fade" id="tab5default">
+                            <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <strong>Information:</strong> This is General Scenerios of the User based on Goals and Frustrations. 
+</div>
+                        <h3>Goals and Frustrations</h3>
+                        <hr>
+                           {{> afQuickField name='usergoals'}}
+                            <br>
+                             {{> afQuickField name='userfrustrations'}}
+                        </div>
+                        
+                         <!-- tab-->
+                        <div class="tab-pane fade" id="tab6default">
+                            <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <strong>Information:</strong> This is General Details on the Users' connectivity and brand affiliations.
+</div>
+                            
+                        <h3>Device Connectivity</h3>
+                        <hr>    
+                         {{> afQuickField name='communication' options="allowed"}}
+                          
+                        </div>
+                        
+                         <!-- tab-->
+                        <div class="tab-pane fade" id="tab7default">
+                            <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   <strong>Information:</strong> This is General Details on the Users' brand affiliations.
+</div>
+                            
+                        <h3>Brand Awareness</h3>
+                        <hr>    
+                         {{> afQuickField name='brandawareness'}}
+                        </div>
+                        
+                    </div>
+                  
+                     </fieldset>
+                                      
+                </div>
+            
+             <br>
+                     <button type="button" class="btn btn-warning minimize-edit pull-right">Return</button>
+    <button type="submit" class="btn btn-info minimize-edit pull-right">Update Details</button>
+                    {{/autoForm}}
+            <Br>
+            </div>
+        
+        
+		{{else}}
+        
+            <div class="col-md-3 text-left">
+                <label text-center ><h4>Traits:</h4></label>
+               <ul style="list-style:none;">
+                   
+                {{#each traits}}
+                  
+                   <li style=""><h4><span class="label label-primary">
+ {{trait}} <i class="fa fa-diamond" aria-hidden="true"></i> </span></h4></li>
+                   
+			{{/each}}  
+                </ul>   
+            </div>
+        
+        
+         <div class="col-md-4 text-left">
+             <label><h4>Brief:</h4></label>
+             
+             <p>This user is a <u>{{age}}</u> year old <u>{{gender}}</u> and <u>{{status}}</u>.<br> They work as an <u>{{job}}</u>. <br> They reside in <u>{{location}}</u>. <br><br> <b>Date Added:</b> {{createdAt}} </p>
+             
+            </div>
+			<!--<p>
+				{{#each Traits}}
+					<span class="ingredient">{{trait}}</span>
+				{{/each}} 
+			</p> --> 
+         <div class="col-md-3 pull-right">
+             <br><br>
+			<a class="btn  btn-info" href="/recipe/{{_id}}">VIEW BRIEF</a>
+        
+			{{#if inMenu}}
+				<button class="btn-deny  toggle-menu">NON-ACTIVE</button>
+			{{else}}
+			 	<button class="btn-primary toggle-menu">ACTIVE</button>
+        
+			{{/if}}
+            </div>
+        
+		{{/if}}
+        
+        </div>
+			<i class="fa fa-trash"></i>
+			<i class="fa fa-pencil"></i>
+	</article>
+</template>

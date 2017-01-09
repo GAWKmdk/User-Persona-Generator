@@ -1,0 +1,100 @@
+<template name="ChartList">
+	<h1 class="page-title">Active Scenerios</h1>
+	
+  
+    <div class="text-center">
+		<div class="row">
+            <div class="col-md-12">
+        {{#each chartList}}
+        
+         <div class="panel panel-default">
+        <div class="row">
+       
+        <div class="col-md-4">
+            <br><br>
+            <img src="{{avatar}}" alt="{{name}}"><br>
+            <a class="btn btn-info" href="/recipe/{{_id}}">VIEW BRIEF</a>
+            <br>
+            </div>
+            
+             <div class="col-md-4 text-left">
+                 <br>
+                 <br>
+               
+                  <label><h4><b>Summary:</b></h4></label>
+             
+             <p>This user is a <u>{{age}}</u> year old <u>{{gender}}</u> and <u>{{status}}</u>.<br> They work as an <u>{{job}}</u>. <br> They reside in <u>{{location}}</u>. <br><br> <b>Date Added:</b> {{createdAt}} </p>
+                 
+            </div>
+            
+            <div class="col-md-4 text-right" style="right:50px;">
+                  <br>
+                  <br>
+                  <br>
+                <label><h4><b>Brand Affiliations:</b></h4></label>
+             <p>
+            <ul style="list-style:none;">
+          {{#each brandawareness}}
+                <li><span class="label label-default"><b>{{brand}}</b> - {{product}}</span></li>
+        {{/each}}
+              </ul>
+            </p>
+            </div>
+            
+        </div>
+             
+         <br><br>
+        <div class="row">
+            
+                        
+                
+                    <div class="col-md-4 pull-left" style="padding:5px;" >
+                        {{#each usergoals}}
+           
+            <div class="panel panel-default" style="padding:25px;min-width:250px;min-height:250px;">
+              <dl>
+               <dt>Goal Scenerio: <br> <em>{{scenerio}}</em></dt> <br> 
+                <dd><i class="fa fa-quote-left" aria-hidden="true"></i>
+  {{description}} <i class="fa fa-quote-right" aria-hidden="true"></i></dd>
+              </dl>
+           </div>
+        {{/each}}</div>
+                    
+                    <div class="col-md-4 pull-center" style="padding:5px;">
+                    <div class="panel panel-default" style="padding:25px;min-width:250px;min-height:250px;">
+                        
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="col-md-4 pull-right" style="padding:5px;">
+                        {{#each userfrustrations}}
+        <div class="panel panel-default" style="padding:25px;min-width:250px;min-height:250px;">
+              <dl>
+               <dt>Frustration Scenerio: <br> <em>{{scenerio}}</em></dt> <br> 
+                <dd><i class="fa fa-quote-left" aria-hidden="true"></i>
+  {{description}} <i class="fa fa-quote-right" aria-hidden="true"></i></dd>
+              </dl>
+              </div>
+        {{/each}}</div>
+                  
+           
+         
+        
+        </div>     
+             
+        </div>
+                
+       
+          
+        
+        
+		{{else}}
+         <blockquote>
+			<p>Please activate a <a href="/recipe-book">user(s)</a> to view their Scenerios.</p>
+             </blockquote>
+		{{/each}}
+        </div></div>
+    </div>
+
+</template>

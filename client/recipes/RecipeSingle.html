@@ -1,0 +1,174 @@
+<template name="RecipeSingle">
+    <h1 class="page-title">Profile Brief</h1>
+    <div class="jumbotron">
+        <input type="button" value="Back" onclick="window.history.back()" /> 
+       
+     <div class="recipe">
+         <br>
+         <h3><b>{{recipe.name}}</b></h3> 
+            <br>
+     <div class="row">
+    
+         <div class="col-md-4">
+          <img src="{{recipe.avatar}}" alt="{{recipe.name}}" />
+         </div>
+        
+         <div class="col-md-8">
+          <div class="table-responsive">
+      <table class="table table-bordered ">
+        
+          <thead class="text-center">
+          <tr>
+          <td><b>Age</b></td>    
+          <td><b>Gender</b></td>        
+          <td><b>Status</b></td> 
+          <td><b>Job</b></td> 
+          <td><b>Location</b></td> 
+           <td><b>Notes/Bio</b></td>    
+          </tr>                    
+          </thead>  
+          
+          <tbody>
+              <tr>
+           <td>{{recipe.age}}</td>
+           <td>{{recipe.gender}}</td>
+           <td>{{recipe.status}}</td>
+            <td>{{recipe.job}}</td>
+            <td>{{recipe.location}}</td>
+            <td>{{recipe.bio}}</td>
+                  </tr>
+          </tbody>
+                  
+        </table>  
+    </div>
+         </div>
+      
+        
+    </div>   
+        
+        <br>
+  
+     <div class="row">
+       <div class="col-md-6 text-right"> 
+           <label><b>Personality - Behavorial</b></label>
+         <ul style="list-style:none;">
+              <li>{{recipe.personal1}}</li>
+              <li>{{recipe.personal2}}</li>
+              <li>{{recipe.personal3}}</li>
+              <li>{{recipe.personal4}}</li>
+              <li>{{recipe.personal5}}</li>
+              <li>{{recipe.personal6}}</li>
+              <li>{{recipe.personal7}}</li>
+              <li>{{recipe.personal8}}</li>
+        </ul>  
+           
+         </div>   
+         
+         <div class="col-md-6">
+         
+             <label><b>Device Connectivities</b></label>
+      
+             <blockquote>
+           <p style="">{{recipe.communication}}</p> 
+           </blockquote>
+         
+         </div>
+         
+   </div>
+    </div>       
+        
+     <div class="recipe">  
+    <div class="row">
+      <div class="col-md-12 text-center">  
+      
+              <label ><h2>Motivations - Behavorial Analysis</h2></label>
+          <hr>
+              
+              <label>Importance of Influence</label> 
+        
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.influence}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+    {{recipe.influence}}
+  </div></div>
+            
+              <label>Importance of Self Achievement</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.selfachievement}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+    {{recipe.selfachievement}}
+  </div></div>
+       
+            
+            
+              <label>Importance of Growth Projection</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.growthprojection}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+  {{recipe.growthprojection}}
+  </div></div>
+         
+            
+            
+              <label>Importance of Fear</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.fear}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+    {{recipe.fear}}
+  </div></div>
+       
+            
+              <label>Importance of Security</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.security}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+   {{recipe.security}}
+  </div></div>
+      
+            
+            
+              <label>Importance of Relationship</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.relationship}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+   {{recipe.relationship}}
+  </div></div>
+        
+            
+              <label>Importance of Fiancial</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.financial}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+    {{recipe.financial}}
+  </div></div>
+         
+            
+              <label>Importance of Professional</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.professional}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+    {{recipe.professional}}
+  </div></div>
+       
+            
+              <label>Importance of Lifestyle</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.lifestyle}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+    {{recipe.lifestyle}}
+  </div></div>
+       
+            
+              <label>Importance of Social</label>
+              
+        <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{recipe.social}}" aria-valuemin="0" aria-valuemax="10" style="width: 60%;">
+    {{recipe.social}}
+  </div></div>
+    
+          
+        </div>
+         </div>  
+       
+</div>   
+    </div>	
+</template>
