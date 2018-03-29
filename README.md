@@ -1,9 +1,13 @@
 # A User Persona Generator for Aspiring UX Designers
 
-- Generate Users and Manage their autoform input data.
+
+Functional Features include: 
+- Generates Users and Manage their autoform input data.
 - Uses easy:search for search retrival of fields
 - Spin off using the Meteor Level Up + Tutorial Recipebook with React.js and Stylus as the base bone template.
 - Uses aldeed:autoform and autoform-noislider for more customization
+
+Re-usable content for database survey forms, sorting and list-forwarding. 
 
 # Screenshots
 
